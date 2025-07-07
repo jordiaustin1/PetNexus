@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="id" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Nexus - Platform Digital Terpadu untuk Kebutuhan Hewan Peliharaan</title>
+    <meta name="title" content="Pet Nexus - Platform Digital Terpadu untuk Kebutuhan Hewan Peliharaan">
+    <meta name="description"
+        content="Pet Nexus menyediakan layanan lengkap untuk hewan peliharaan Anda: konsultasi dokter hewan, grooming, hotel, penitipan, toko produk hewan, pelatihan, dan komunitas pecinta hewan dalam satu aplikasi.">
+    <meta name="keywords"
+        content="pet app, aplikasi hewan peliharaan, dokter hewan, grooming hewan, pet hotel, pet mart, komunitas hewan, perawatan hewan, pet trainer, sitter walker, pet organizer, matchmaking hewan">
+    <meta name="author" content="Pet Nexus Indonesia">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="id">
+    <meta name="geo.region" content="ID">
+    <meta name="geo.placename" content="Indonesia">
+    <link rel="canonical" href="https://petnexus.id/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://petnexus.id/">
+    <meta property="og:title" content="Pet Nexus - Platform Digital Terpadu untuk Kebutuhan Hewan Peliharaan">
+    <meta property="og:description"
+        content="Pet Nexus menyediakan layanan lengkap untuk hewan peliharaan Anda: konsultasi dokter hewan, grooming, hotel, penitipan, toko produk hewan, pelatihan, dan komunitas pecinta hewan dalam satu aplikasi.">
+    <meta property="og:image" content="https://petnexus.id/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Pet Nexus">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://petnexus.id/">
+    <meta property="twitter:title" content="Pet Nexus - Platform Digital Terpadu untuk Kebutuhan Hewan Peliharaan">
+    <meta property="twitter:description"
+        content="Pet Nexus menyediakan layanan lengkap untuk hewan peliharaan Anda: konsultasi dokter hewan, grooming, hotel, penitipan, toko produk hewan, pelatihan, dan komunitas pecinta hewan dalam satu aplikasi.">
+    <meta property="twitter:image" content="https://petnexus.id/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pet Nexus",
+        "url": "https://petnexus.id",
+        "logo": "https://petnexus.id/images/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/PetsNexus",
+            "https://www.instagram.com/petnexus.official",
+            "https://twitter.com/PetNexus",
+            "https://www.tiktok.com/@petnexus"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "petnexus.official@gmail.com",
+            "contactType": "customer service",
+            "availableLanguage": ["Indonesian", "English"]
+        },
+        "description": "Platform digital terpadu yang menyediakan solusi lengkap, terpercaya, dan inovatif bagi pemilik hewan peliharaan.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "ID",
+            "addressLocality": "Jakarta"
+        },
+        "potentialAction": {
+            "@type": "DownloadAction",
+            "target": "https://petnexus.id/download"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Pet Nexus",
+        "operatingSystem": "Android, iOS",
+        "applicationCategory": "Lifestyle, Pets",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "IDR"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250"
+        }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f7cac',
+                        secondary: '#f28f3b',
+                        tertiary: '#7fc29b',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f7cac 0%, #7fc29b 100%);
+        }
+
+        .dark .gradient-bg {
+            background: linear-gradient(135deg, #345372 0%, #588a6b 100%);
+        }
+
+        #home {
+            padding-top: 4rem;
+        }
+
+        .dark {
+            color-scheme: dark;
+        }
+
+        .dark body {
+            background-color: #1a1a1a;
+            color: #f3f4f6;
+        }
+
+        .dark .bg-white {
+            background-color: #2a2a2a;
+        }
+
+        .dark .bg-gray-50 {
+            background-color: #1a1a1a;
+        }
+
+        .dark .text-gray-800 {
+            color: #f3f4f6;
+        }
+
+        .dark .text-gray-700 {
+            color: #e5e7eb;
+        }
+
+        .dark .text-gray-600 {
+            color: #d1d5db;
+        }
+
+        .dark .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .dark .theme-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 transition-colors duration-300">
+    <nav class="bg-white dark:bg-gray-900 shadow-md fixed w-full z-10 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="flex items-center">
+                        <img src="logo.png" alt="Pet Nexus Logo" class="h-10 mr-3">
+                        <div class="text-2xl font-bold text-primary">
+                            Pet<span class="text-secondary">Nexus</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <div class="flex items-center space-x-4">
+                        <a href="#home"
+                            class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Beranda</a>
+                        <a href="#about"
+                            class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Tentang
+                            Kami</a>
+                        <a href="#vision"
+                            class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Visi
+                            &
+                            Misi</a>
+                        <a href="#features"
+                            class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Fitur</a>
+                        <a href="#advantages"
+                            class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Keunggulan</a>
+                        <button id="themeToggle" class="theme-toggle ml-2 text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-sun text-xl dark:hidden"></i>
+                            <i class="fas fa-moon text-xl hidden dark:block"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="themeToggleMobile" class="theme-toggle mr-2 text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-sun text-xl dark:hidden"></i>
+                        <i class="fas fa-moon text-xl hidden dark:block"></i>
+                    </button>
+                    <button type="button"
+                        class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="gradient-bg">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-24">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                            Platform Digital <br>untuk <span class="text-secondary">Hewan Kesayangan</span>
+                        </h1>
+                        <p class="text-white text-lg md:text-xl mb-8 opacity-90">
+                            Care, Connect, Comfort – Bersama Pet Nexus
+                        </p>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <button
+                                class="bg-secondary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-300 font-medium">
+                                Mulai Sekarang
+                            </button>
+                            <button
+                                class="bg-white text-primary px-6 py-3 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 font-medium">
+                                Pelajari Lebih Lanjut
+                            </button>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 relative">
+                        <div
+                            class="absolute -top-6 -left-6 w-12 h-12 bg-secondary rounded-full opacity-20 animate-pulse">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-tertiary rounded-full opacity-30 animate-pulse"
+                            style="animation-delay: 1s;"></div>
+                        <div class="absolute top-1/4 -right-6 w-8 h-8 bg-primary rounded-full opacity-20 animate-pulse"
+                            style="animation-delay: 0.5s;"></div>
+                        <div class="absolute -top-3 right-1/4 text-secondary opacity-70 transform rotate-12">
+                            <i class="fas fa-paw text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-10 left-10 text-tertiary opacity-70 transform -rotate-12">
+                            <i class="fas fa-paw text-2xl"></i>
+                        </div>
+                        <div
+                            class="relative overflow-hidden rounded-3xl shadow-2xl transform transition duration-500 hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 z-10 pointer-events-none rounded-3xl">
+                            </div>
+                            <img src="maskot.jpg" alt="Pet Nexus App Screenshot"
+                                class="w-full transform transition duration-500 hover:scale-105 z-0 rounded-3xl" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Tentang Pet Nexus</h2>
+                <div class="w-20 h-1 bg-tertiary mx-auto mb-6"></div>
+                <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Pet Nexus adalah platform digital terpadu yang dirancang untuk menjawab seluruh kebutuhan pemilik
+                    hewan peliharaan dalam satu aplikasi.
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Apa Itu Pet Nexus?</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Melalui Pet Nexus, pengguna dapat mengakses berbagai layanan seperti pembelian produk hewan,
+                        konsultasi dengan dokter hewan, pemesanan grooming & hotel hewan, hingga fitur interaktif
+                        komunitas dan event.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Dengan menghubungkan pengguna kepada mitra profesional terpercaya, Pet Nexus berkomitmen
+                        menghadirkan kemudahan, keamanan, dan kenyamanan dalam merawat hewan kesayangan Anda di mana pun
+                        dan kapan pun.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/1200x500/444/fff?text=About" alt="Pet Caring"
+                        class="rounded-lg shadow-md w-full" />
+                </div>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 mb-16 transition-colors duration-300">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white text-center mb-10">Tim Kami</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center transition-colors duration-300">
+                        <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center mb-4">
+                            <img src="https://placehold.co/240x240/444/fff?text=CEO" alt="CEO"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 dark:text-white">Andi Wijaya</h4>
+                        <p class="text-primary font-medium">CEO & Founder</p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center transition-colors duration-300">
+                        <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center mb-4">
+                            <img src="https://placehold.co/240x240/444/fff?text=CTO" alt="CTO"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 dark:text-white">Dian Putri</h4>
+                        <p class="text-primary font-medium">CTO</p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center transition-colors duration-300">
+                        <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center mb-4">
+                            <img src="https://placehold.co/240x240/444/fff?text=COO" alt="COO"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 dark:text-white">Budi Santoso</h4>
+                        <p class="text-primary font-medium">COO</p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center transition-colors duration-300">
+                        <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center mb-4">
+                            <img src="https://placehold.co/240x240/444/fff?text=CMO" alt="CMO"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 dark:text-white">Maya Indah</h4>
+                        <p class="text-primary font-medium">CMO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Visi & Misi</h2>
+                <div class="w-20 h-1 bg-tertiary mx-auto mb-6"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div
+                    class="lg:w-1/2 bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md border-t-4 border-primary transition-colors duration-300">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Visi Kami</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Menjadi platform digital terdepan di Indonesia yang menyediakan solusi lengkap, terpercaya, dan
+                        inovatif bagi pemilik hewan peliharaan untuk meningkatkan kualitas hidup hewan dan komunitas
+                        pecinta hewan secara berkelanjutan.
+                    </p>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-tertiary mt-1 mr-2"></i>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-tertiary mt-1 mr-2"></i>
+                            <span>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-tertiary mt-1 mr-2"></i>
+                            <span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="lg:w-1/2 bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md border-t-4 border-secondary transition-colors duration-300">
+                    <div
+                        class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Misi Kami</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Menghadirkan layanan terpadu untuk memenuhi kebutuhan hewan peliharaan secara praktis dan
+                        efisien.
+                    </p>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-tertiary mt-1 mr-2"></i>
+                            <span>Menghadirkan layanan terpadu berbasis aplikasi untuk memenuhi kebutuhan hewan
+                                peliharaan secara praktis dan efisien.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-tertiary mt-1 mr-2"></i>
+                            <span>Menyediakan akses mudah ke layanan profesional seperti dokter hewan, grooming,
+                                penitipan, dan pelatihan.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-tertiary mt-1 mr-2"></i>
+                            <span>Mendorong inovasi berkelanjutan dalam teknologi, layanan, dan pengalaman pengguna di
+                                dunia pet digital.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 md:py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Fitur Kami</h2>
+                <div class="w-20 h-1 bg-tertiary mx-auto mb-6"></div>
+                <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Pet Nexus menawarkan berbagai fitur lengkap untuk memenuhi kebutuhan hewan peliharaan Anda.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-colors duration-300 transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-shopping-bag text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Pet Mart</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Belanja kebutuhan hewan seperti makanan, vitamin, mainan, dan aksesori secara online.
+                        </p>
+                        <div class="flex space-x-2">
+                            <span
+                                class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Makanan</span>
+                            <span
+                                class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Aksesoris</span>
+                            <span
+                                class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Obat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-colors duration-300 transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <i class="fas fa-stethoscope text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Doctor Hewan</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Konsultasi langsung dengan dokter hewan tersertifikasi dan penjadwalan pemeriksaan atau
+                            tindakan medis langsung ke klinik mitra.
+                        </p>
+                        <div class="flex space-x-2">
+                            <span
+                                class="px-3 py-1 bg-secondary bg-opacity-10 text-secondary text-sm rounded-full">Konsultasi</span>
+                            <span
+                                class="px-3 py-1 bg-secondary bg-opacity-10 text-secondary text-sm rounded-full">Perawatan</span>
+                            <span
+                                class="px-3 py-1 bg-secondary bg-opacity-10 text-secondary text-sm rounded-full">Vaksinasi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-colors duration-300 transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-tertiary flex items-center justify-center">
+                        <i class="fas fa-cut text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Grooming</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Booking layanan grooming profesional untuk menjaga kebersihan dan penampilan hewan
+                            peliharaan Anda.
+                        </p>
+                        <div class="flex space-x-2">
+                            <span
+                                class="px-3 py-1 bg-tertiary bg-opacity-10 text-tertiary text-sm rounded-full">Grooming</span>
+                            <span
+                                class="px-3 py-1 bg-tertiary bg-opacity-10 text-tertiary text-sm rounded-full">Spa</span>
+                            <span
+                                class="px-3 py-1 bg-tertiary bg-opacity-10 text-tertiary text-sm rounded-full">Perawatan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-colors duration-300 transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-home text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Pet Hotel</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Titipkan hewan peliharaan di tempat aman dan nyaman saat Anda bepergian.
+                        </p>
+                        <div class="flex space-x-2">
+                            <span
+                                class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Penginapan</span>
+                            <span
+                                class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Penitipan</span>
+                            <span
+                                class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Perawatan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-colors duration-300 transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <i class="fas fa-user-check text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Sitter & Walker</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Layanan penitipan dan pengajak jalan hewan ke rumah Anda, oleh mitra terverifikasi.
+                        </p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-secondary bg-opacity-10 text-secondary text-sm rounded-full">Home
+                                Service</span>
+                            <span
+                                class="px-3 py-1 bg-secondary bg-opacity-10 text-secondary text-sm rounded-full">Walking</span>
+                            <span
+                                class="px-3 py-1 bg-secondary bg-opacity-10 text-secondary text-sm rounded-full">Penitipan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-colors duration-300 transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-tertiary flex items-center justify-center">
+                        <i class="fas fa-medal text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Trainer</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Layanan pelatihan oleh profesional untuk membentuk perilaku dan kemampuan hewan peliharaan
+                            Anda.
+                        </p>
+                        <div class="flex space-x-2">
+                            <span
+                                class="px-3 py-1 bg-tertiary bg-opacity-10 text-tertiary text-sm rounded-full">Pelatihan</span>
+                            <span
+                                class="px-3 py-1 bg-tertiary bg-opacity-10 text-tertiary text-sm rounded-full">Behavior</span>
+                            <span
+                                class="px-3 py-1 bg-tertiary bg-opacity-10 text-tertiary text-sm rounded-full">Private</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+                    <div
+                        class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-colors duration-300 transition-transform duration-300 hover:transform hover:scale-105">
+                        <div class="h-48 bg-primary flex items-center justify-center">
+                            <i class="fas fa-heart text-white text-7xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Pet Love (Matchmaking)</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Fitur untuk menemukan pasangan yang cocok bagi hewan Anda atau menjalin relasi antar
+                                pemilik
+                                hewan.
+                            </p>
+                            <div class="flex space-x-2">
+                                <span
+                                    class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Matchmaking</span>
+                                <span
+                                    class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Komunitas</span>
+                                <span
+                                    class="px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm rounded-full">Adopsi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md transition-colors duration-300 transition-transform duration-300 hover:transform hover:scale-105">
+                        <div class="h-48 bg-secondary flex items-center justify-center">
+                            <i class="fas fa-calendar-alt text-white text-7xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Pet Organizer</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Temukan dan hubungi event organizer khusus hewan untuk mengadakan acara seperti ulang
+                                tahun,
+                                adopsi massal, gathering komunitas, dan lainnya.
+                            </p>
+                            <div class="flex space-x-2">
+                                <span
+                                    class="px-3 py-1 bg-secondary bg-opacity-10 text-secondary text-sm rounded-full">Event</span>
+                                <span
+                                    class="px-3 py-1 bg-secondary bg-opacity-10 text-secondary text-sm rounded-full">Organizer</span>
+                                <span
+                                    class="px-3 py-1 bg-secondary bg-opacity-10 text-secondary text-sm rounded-full">Gathering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages" class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Keunggulan Kami</h2>
+                <div class="w-20 h-1 bg-tertiary mx-auto mb-6"></div>
+                <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Apa yang membuat Pet Nexus menjadi pilihan tepat untuk kebutuhan hewan peliharaan Anda?
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md transition-colors duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-certificate text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Mitra Tersertifikasi</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Mitra layanan tersertifikasi dan terverifikasi untuk memberikan layanan terbaik bagi hewan
+                        peliharaan Anda.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md transition-colors duration-300">
+                    <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">UI/UX Ramah Pengguna</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Aplikasi dengan UI/UX yang ramah pengguna, memudahkan Anda mengakses semua layanan dengan cepat.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md transition-colors duration-300">
+                    <div class="w-16 h-16 bg-tertiary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-th-large text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Layanan Lengkap</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Layanan lengkap dalam satu platform untuk memenuhi semua kebutuhan hewan peliharaan Anda.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md transition-colors duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Dukungan Komunitas</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Dukungan komunitas dan event untuk membantu Anda terhubung dengan sesama pecinta hewan.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md transition-colors duration-300">
+                    <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-star text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Sistem Rating</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Sistem rating dan ulasan dari pengguna untuk membantu Anda memilih layanan terbaik.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md transition-colors duration-300">
+                    <div class="w-16 h-16 bg-tertiary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-lightbulb text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Inovasi Berkelanjutan</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Inovasi terus-menerus berbasis feedback pengguna untuk meningkatkan kualitas layanan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16">
+                <div
+                    class="bg-gradient-to-r from-primary/10 to-tertiary/10 p-8 md:p-12 rounded-xl shadow-lg transition-colors duration-300 overflow-hidden relative">
+                    <div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-primary opacity-10"></div>
+                    <div class="absolute -bottom-8 -left-8 w-24 h-24 rounded-full bg-tertiary opacity-10"></div>
+
+                    <div class="flex flex-col items-center justify-center text-center relative z-10">
+                        <div
+                            class="w-24 h-24 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mb-8 shadow-xl animate-pulse">
+                            <i class="fas fa-rocket text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 tracking-tight">
+                            Coming Soon</h3>
+                        <div class="w-16 h-1 bg-yellow-500 mx-auto mb-6"></div>
+
+                        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 text-lg">
+                            Aplikasi Pet Nexus sedang dalam tahap pengembangan final. Kami akan segera hadir untuk
+                            memenuhi semua kebutuhan hewan peliharaan kesayangan Anda dengan layanan terbaik.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <img src="logo.png" alt="Pet Nexus Logo" class="h-10 mr-3">
+                        <div class="text-2xl font-bold">
+                            Pet<span class="text-secondary">Nexus</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 max-w-md mb-6">
+                        Care, Connect, Comfort – Bersama Pet Nexus
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/PetsNexus" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/petnexus.official" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:petnexus.official@gmail.com"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Perusahaan</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition duration-200">Tentang
+                                    Kami</a></li>
+                            <li><a href="#vision" class="text-gray-400 hover:text-white transition duration-200">Visi &
+                                    Misi</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Layanan</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#features" class="text-gray-400 hover:text-white transition duration-200">Pet
+                                    Mart</a></li>
+                            <li><a href="#features"
+                                    class="text-gray-400 hover:text-white transition duration-200">Doctor Hewan</a></li>
+                            <li><a href="#features"
+                                    class="text-gray-400 hover:text-white transition duration-200">Grooming</a></li>
+                            <li><a href="#features" class="text-gray-400 hover:text-white transition duration-200">Pet
+                                    Hotel</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-2 text-tertiary"></i>
+                                <a href="mailto:petnexus.official@gmail.com"
+                                    class="text-gray-400 hover:text-white transition duration-200">petnexus.official@gmail.com</a>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fab fa-facebook mt-1 mr-2 text-tertiary"></i>
+                                <a href="https://www.facebook.com/PetsNexus" target="_blank" rel="noopener noreferrer"
+                                    class="text-gray-400 hover:text-white transition duration-200">Pets Nexus</a>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fab fa-instagram mt-1 mr-2 text-tertiary"></i>
+                                <a href="https://www.instagram.com/petnexus.official" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-gray-400 hover:text-white transition duration-200">petnexus.official</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">© 2025 Pet Nexus. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const html = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+            const themeToggleMobile = document.getElementById('themeToggleMobile');
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+
+            function toggleTheme() {
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    html.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            }
+
+            themeToggle.addEventListener('click', toggleTheme);
+            themeToggleMobile.addEventListener('click', toggleTheme);
+
+            const mobileMenuButton = document.querySelector('.md\\:hidden button:last-child');
+            let isMenuOpen = false;
+
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'mobile-nav bg-white dark:bg-gray-900 shadow-lg fixed left-0 right-0 top-16 p-4 hidden z-20 transition-colors duration-300';
+
+            const desktopLinks = document.querySelector('.md\\:flex .flex').cloneNode(true);
+
+            const themeToggleClone = desktopLinks.querySelector('#themeToggle');
+            if (themeToggleClone) {
+                themeToggleClone.parentElement.removeChild(themeToggleClone);
+            }
+
+            desktopLinks.className = 'flex flex-col space-y-4';
+            mobileMenu.appendChild(desktopLinks);
+
+            document.querySelector('nav .container').appendChild(mobileMenu);
+
+            function toggleMenu(e) {
+                e.stopPropagation();
+
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+            }
+
+            if (mobileMenuButton) {
+                mobileMenuButton.removeEventListener('click', toggleMenu);
+                mobileMenuButton.addEventListener('click', toggleMenu, true);
+                console.log('Mobile menu button detected and event listener attached');
+            } else {
+                console.error('Mobile menu button not found!');
+            }
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    isMenuOpen = false;
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                });
+            });
+
+            document.addEventListener('click', function (event) {
+                if (isMenuOpen && !event.target.closest('.mobile-nav') && !event.target.closest('.md\\:hidden button:last-child')) {
+                    isMenuOpen = false;
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 768 && isMenuOpen) {
+                    isMenuOpen = false;
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+            });
+
+            const backToTopButton = document.getElementById('backToTop');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.classList.remove('opacity-0', 'invisible');
+                        backToTopButton.classList.add('opacity-100', 'visible');
+                    } else {
+                        backToTopButton.classList.add('opacity-0', 'invisible');
+                        backToTopButton.classList.remove('opacity-100', 'visible');
+                    }
+                });
+
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        const navbarHeight = document.querySelector('nav').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
